@@ -13,7 +13,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import org.springframework.security.core.userdetails.UserDetails;
-
+ 
 @Entity
 @Table(name = "usuarios")
 public class Usuario implements UserDetails {
