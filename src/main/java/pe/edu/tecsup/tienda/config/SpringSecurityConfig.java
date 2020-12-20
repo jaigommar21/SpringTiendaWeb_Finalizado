@@ -59,12 +59,12 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(final HttpSecurity http) throws Exception {
 		
 		http
-			// Configure authorizations
-			// .authorizeRequests()
-			// .antMatchers("/" /*, "/**"*/).permitAll()
+		// Configure authorizations
+			.authorizeRequests()
+			.antMatchers("/").permitAll()
 			// .antMatchers("/home/**").authenticated()
-			// .antMatchers("/admin/**").hasAnyAuthority("Administrador")
-			//   .and()
+			.antMatchers("/productos/**").hasAnyAuthority("Administrador")
+		  .and()
 		// Change login
 			.formLogin()
 			.loginPage("/login")
